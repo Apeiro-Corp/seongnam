@@ -1,20 +1,20 @@
 import 'package:flutter/widgets.dart';
 
-class TapEffect extends StatefulWidget {
-  const TapEffect(
-    Key? key, {
+class Seongnam extends StatefulWidget {
+  const Seongnam({
+    Key? key,
     required this.child,
     required this.onTap,
   }) : super(key: key);
 
-  final VoidCallback onTap;
   final Widget child;
+  final VoidCallback onTap;
 
   @override
-  State<TapEffect> createState() => _TapEffectState();
+  State<Seongnam> createState() => _SeongnamState();
 }
 
-class _TapEffectState extends State<TapEffect> {
+class _SeongnamState extends State<Seongnam> {
   bool _isTap = false;
 
   void _onTapDown(_) {
