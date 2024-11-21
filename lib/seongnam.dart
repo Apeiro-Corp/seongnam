@@ -1,8 +1,4 @@
-/// Support for doing something awesome.
-///
-/// More dartdocs go here.
-library;
+/// Simple tap effect package for Flutter.
+library seongnam;
 
-export 'src/seongnam_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/seongnam.dart';
