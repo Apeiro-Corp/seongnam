@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 
 class TapEffect extends StatefulWidget {
-  final VoidCallback onTap;
-  final Widget child;
-
-  const TapEffect({
-    super.key,
+  const TapEffect(
+    Key? key, {
     required this.child,
     required this.onTap,
-  });
+  }) : super(key: key);
+
+  final VoidCallback onTap;
+  final Widget child;
 
   @override
   State<TapEffect> createState() => _TapEffectState();
