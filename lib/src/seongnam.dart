@@ -8,7 +8,7 @@ class Seongnam extends StatefulWidget {
   }) : super(key: key);
 
   final Widget child;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   @override
   State<Seongnam> createState() => _SeongnamState();
@@ -26,7 +26,7 @@ class _SeongnamState extends State<Seongnam> {
   void _onTapUp(_) {
     Future.delayed(const Duration(milliseconds: 30), () {
       if (mounted) {
-        widget.onTap();
+        widget.onTap?.call();
         setState(() {
           _isTap = false;
         });
@@ -42,10 +42,11 @@ class _SeongnamState extends State<Seongnam> {
 
   @override
   Widget build(BuildContext context) {
+    final enabled = widget.onTap != null;
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onTapDown: _onTapDown,
-      onTapUp: _onTapUp,
+      onTapDown: enabled ? _onTapDown : null,
+      onTapUp: enabled ? _onTapUp : null,
       onTapCancel: _onTapCancel,
       child: AnimatedContainer(
         transformAlignment: Alignment.center,

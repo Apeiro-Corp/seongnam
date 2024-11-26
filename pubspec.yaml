@@ -1,12 +1,11 @@
 name: seongnam
 description: Simple tap effect package for Flutter.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Apeiro-Corp/seongnam
 repository: https://github.com/Apeiro-Corp/seongnam
 documentation: https://github.com/Apeiro-Corp/seongnam
 
 topics:
-  - tap
   - tap-effect
   - vibrate
   - vibrate-tap
